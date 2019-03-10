@@ -72,6 +72,11 @@ public class Main {
         String currentToken;
 
         // проходимся по каждому токену
+        if (tokenizer.countTokens() > 3) {
+            System.out.println("Ошибка: не удовлетворяет начальным условиям.");
+            System.exit(0);
+        }
+
         while (tokenizer.hasMoreTokens()) {
             // выбираем следующий токен
             currentToken = tokenizer.nextToken();
